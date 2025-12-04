@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORFOLIO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="inicio">
+    <header>
+        <!-- Menú de página -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img width=60 src="../assets/img/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        <a class="nav-link" href="fotografia.html">Fotos</a>
+                        <a class="nav-link" href="video.html">Video</a>
+                        <a class="nav-link" href="desarrolloweb.html">Desarrollo web</a>
+                        <a class="nav-link" href="identidad.html">Identidad</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="title">
+            <div class="container">
+                <h1>Fotografía</h1>
+                <p>En esta sección vas a encontrar fotografias que saco y ejemplos de edición.</p>
+            </div>
+        </section>
+        <!--sección de fotos antes y despues-->
+        <section class="foto-toggle">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="card-toggle-fotos">
+                            <input type="checkbox" id="toggle-edicion" class="toggle-edicion-input">
+                            <div class="card-toggle-header">
+                                <label for="toggle-edicion" class="toggle-switch">
+                                    <span class="toggle-text toggle-off">Sin editar</span>
+                                    <span class="toggle-slider"></span>
+                                    <span class="toggle-text toggle-on">Con edición</span>
+                                </label>
+                            </div>
+                            <div class="galeria-original">
+                                <div class="row g-3">
+                                    <div class="col-12 col-md-4">
+                                        <img src="../assets/img/original1.jpg" class="d-block foto-thumb"
+                                            alt="Foto 1 Original">
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <img src="../assets/img/original2.jpg" class="d-block foto-thumb"
+                                            alt="Foto 2 Original">
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <img src="../assets/img/original3.jpg" class="d-block foto-thumb"
+                                            alt="Foto 3 Original">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="galeria-fotos galeria-editada">
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <img src="../assets/img/editada1.jpg" alt="foto editada 1"
+                                            class="d-block foto-thumb">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="../assets/img/editada2.jpg" alt="foto editada 2"
+                                            class="d-block foto-thumb">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="../assets/img/editada3.jpg" alt="foto editada 3"
+                                            class="d-block foto-thumb">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--grid de galerias de fotos dentro de carpetas-->
+    <section class="carpeta-galeria">
+        <div class="container">
+            <div class="foto-tabs">
+                <!-- radios ocultos -->
+                <input type="radio" name="tabs-foto" id="tab-gastro" checked>
+                <input type="radio" name="tabs-foto" id="tab-paisajes">
+                <input type="radio" name="tabs-foto" id="tab-retratos">
+                <!-- tapa de la carpeta con pestañas -->
+                <div class="tabs-header">
+                    <label for="tab-gastro"   class="tab">Gastronomía</label>
+                    <label for="tab-paisajes" class="tab">Paisajes</label>
+                    <label for="tab-retratos" class="tab">Retratos</label>
+                </div>
+                <div class="tabs-content">
+                    <div class="tab-panel panel-gastro">
+                        <div class="galeria-grid">
+                            <figure class="foto-item">
+                                <img src="../assets/img/gastronomia1.png" class="foto-grid" alt="gastro 1">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/gastronomia2.png" class="foto-grid" alt="gastro 2">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/gastronomia3.png" class="foto-grid" alt="gastro 3">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/gastronomia4.png" class="foto-grid" alt="gastro 4">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/gastronomia5.png" class="foto-grid" alt="gastro 5">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/gastronomia6.png" class="foto-grid" alt="gastro 6">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/gastronomia7.png" class="foto-grid" alt="gastro 7">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/gastronomia8.png" class="foto-grid" alt="gastro 8">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/gastronomia9.png" class="foto-grid" alt="gastro 9">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/gastronomia10.png" class="foto-grid" alt="gastro 10">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/gastronomia11.png" class="foto-grid" alt="gastro 11">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/gastronomia12.png" class="foto-grid" alt="gastro 12">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="tab-panel panel-paisajes">
+                        <div class="galeria-grid">
+                            <figure class="foto-item">
+                                <img src="../assets/img/paisaje1.png" class="foto-grid" alt="paisaje 1">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/paisaje2.png" class="foto-grid" alt="paisaje 2">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/paisaje3.png" class="foto-grid" alt="paisaje 3">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/paisaje4.png" class="foto-grid" alt="paisaje 4">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/paisaje5.png" class="foto-grid" alt="paisaje 5">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/paisaje6.png" class="foto-grid" alt="paisaje 6">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/paisaje7.png" class="foto-grid" alt="paisaje 7">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/paisaje8.png" class="foto-grid" alt="paisaje 8">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/paisaje9.png" class="foto-grid" alt="paisaje 9">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/paisaje10.png" class="foto-grid" alt="paisaje 10">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/paisaje11.png" class="foto-grid" alt="paisaje 11">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/paisaje12.png" class="foto-grid" alt="paisaje 12">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="tab-panel panel-retratos">
+                        <div class="galeria-grid">
+                            <figure class="foto-item">
+                                <img src="../assets/img/retrato1.png" class="foto-grid" alt="retrato 1">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/retrato2.png" class="foto-grid" alt="retrato 2">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/retrato3.png" class="foto-grid" alt="retrato 3">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/retrato4.png" class="foto-grid" alt="retrato 4">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/retrato5.png" class="foto-grid" alt="retrato 5">
+                            </figure>
+                            <figure class="foto-item">
+                                <img src="../assets/img/retrato6.png" class="foto-grid" alt="retrato 6">
+                            </figure>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>  
+    </section> 
+
+    </main>
+    <footer>
+        <!-- metodo de contacto -->
+        <a href="mailto:jochumottaa@gmail.com" target="_blank">Queres saber más?</a>
+        <p> Porfolio 2025.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORFOLIO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="inicio">
+    <header>
+        <!-- Menú de página -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img width=60 src="assets/img/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link" href="pages/fotografia.html">Fotos</a>
+                        <a class="nav-link" href="pages/video.html">Video</a>
+                        <a class="nav-link" href="pages/desarrolloweb.html">Desarrollo web</a>
+                        <a class="nav-link" href="pages/identidad.html">Identidad</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- presentación -->
+        <section class="title">
+            <div class="container mt-1">
+                <div class="row align-items-center">
+                    <!--carrusel de boostrap-->
+                    <div class="col-sm-12 col-lg-4 offset-lg-1 align-items-center">
+                        <div id="carouselExample" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/img/1.png" class="d-block w-100" alt="mi recibida">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/2.png" class="d-block w-100" alt="mi trabajo">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/3.png" class="d-block w-100"
+                                        alt="lugares donde siempre vuelvo">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!--columna de texto-->
+                    <div class="col-sm-12 col-lg-7">
+                        <h1>Portafolio</h1>
+                        <h2>Josefina Motta.</h2>
+                        <p> Soy Josefina, tengo 23 años y soy de Buenos Aires, Argentina. <br> Estudié Gestión Ambiental
+                            y Bioarquitectura, porque siempre me interesó mezclar el diseño con los saberes ancestrales,
+                            pero sin dejar de lado lo contemporáneo. <br> Desde chica siempre me moví en el mundo
+                            creativo: hice costura, pintura, fotografía, alfarería, cocina, accesorios, y un montón de
+                            emprendimientos. Siempre busqué distintas formas de expresar y de crear. <br> Me gusta
+                            transformar ideas en experiencias visuales que conectan emociones con historias. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- sección de perfil con pestañas -->
+        <section class="carpeta">
+            <div class="container mt-1">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-lg-7 offset-lg-1 align-items-center">
+                        <section class="perfil-tabs">
+                            <input type="radio" name="tabs-perfil" id="tab-experiencia" checked>
+                            <input type="radio" name="tabs-perfil" id="tab-estudios">
+                            <input type="radio" name="tabs-perfil" id="tab-herramientas">
+                            <!-- pestañas -->
+                            <div class="tabs-header">
+                                <label for="tab-experiencia" class="tab">Experiencia</label>
+                                <label for="tab-estudios" class="tab">Estudios</label>
+                                <label for="tab-herramientas" class="tab">Herramientas</label>
+                            </div>
+                            <!-- Contenido según la pestaña -->
+                            <div class="tabs-content">
+                                <div class="tab-panel panel-experiencia">
+                                    <h3>Experiencia</h3>
+                                    <p>Dirección creativa, fotografía y edición de video para proyectos
+                                        independientes y marcas que buscan una identidad propia.</p>
+                                    <p>Trabajé en proyectos diversos usando la creatividad para resolver problemas y
+                                        contar historias. En gastronomía y cultura lideré la transformación de un
+                                        salón en restaurante, creando su identidad y rediseñando espacios. En
+                                        gestión pública coordiné proyectos ambientales y campañas de comunicación.
+                                        También trabajé en comercio y desarrollé asesorías freelance en contenido,
+                                        fotografía y video. Me gusta abordar los proyectos de forma integral, desde
+                                        la organización hasta la experiencia final, buscando eficiencia, coherencia
+                                        y una narrativa auténtica que conecte con las personas y su entorno.</p>
+                                </div>
+                                <div class="tab-panel panel-estudios">
+                                    <h3>Estudios</h3>
+                                    <p>Soy Licenciada en Gestión Ambiental (UADE) y completé una Diplomatura en
+                                        Bioarquitectura (UTN), enfocada en diseño sustentable y procesos
+                                        constructivos responsables. Actualmente estudio en la Escuela de Fotografía
+                                        35mm, donde me formo en fotografía y video, edición con DaVinci Resolve y
+                                        After Effects, y herramientas de diseño como Photoshop y otras del
+                                        ecosistema Adobe. También incorporo conocimientos de narrativa visual e
+                                        historia del cine para enriquecer mi mirada creativa. En paralelo, curso
+                                        Desarrollo Web en Coderhouse, integrando programación y diseño en proyectos
+                                        digitales.</p>
+                                </div>
+                                <div class="tab-panel panel-herramientas">
+                                    <h3>Herramientas</h3>
+                                    <p>Fotografía & Video: Cámara Sony A7 IV (full frame), Cámara Canon analógica
+                                        35mm, Cámara Super 8 (cine analógico), Drone DJI Mini 4 Pro, Iluminación y
+                                        audio portátiles.</p>
+                                    <p>Edición, Diseño & Desarrollo: DaVinci Resolve, After Effects, Photoshop e
+                                        Illustrator (Adobe), Affinity Photo / Designer, Figma, HTML · CSS.</p>
+                                    <p>Lenguaje creativo: Narrativa visual & storytelling, Dirección creativa,
+                                        Construcción de identidad & concepto, Estética digital + sensibilidad
+                                        documental.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                    <img src="assets/img/8.png" alt="camara" class="img-fluid hero-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- metodo de contacto -->
+        <a href="mailto:jochumottaa@gmail.com" target="_blank">Queres saber más?</a>
+        <p> Porfolio 2025.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>

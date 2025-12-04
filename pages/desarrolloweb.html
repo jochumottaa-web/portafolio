@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORFOLIO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="animaciones">
+    <header>
+        <!-- Menú de página -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img width=60 src="../assets/img/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        <a class="nav-link" href="fotografia.html">Fotos</a>
+                        <a class="nav-link" href="video.html">Video</a>
+                        <a class="nav-link" href="desarrolloweb.html">Desarrollo web</a>
+                        <a class="nav-link" href="identidad.html">Identidad</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="dw-main container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div class="title dw">
+            <h1>DESARROLLO WEB</h1>
+            <h2>Mis procesos</h2>
+        </div>
+        <!-- TÍTULO + INTRO -->
+        <section class="dw-hero" id="dw-top">
+            <h3 class="dw-title">Lo que puedo hacer con código.</h1>
+            <p class="dw-intro">En esta sección te muestro, de forma simple e interactiva, qué puedo hacer usando <strong>HTML, CSS, Bootstrap</strong> y un poco de creatividad. Todo lo que ves acá está hecho sin JavaScript.</p>
+        </section>
+        <!-- MENÚ INTERNO DE SECCIONES -->
+        <nav class="dw-nav-local">
+            <a href="#dw-html" class="dw-nav-link">HTML</a>
+            <a href="#dw-html-css" class="dw-nav-link">HTML + CSS</a>
+            <a href="#dw-interacciones" class="dw-nav-link">Interacciones</a>
+            <a href="#dw-animaciones" class="dw-nav-link">Animaciones</a>
+            <a href="#dw-js" class="dw-nav-link">JavaScript (próximamente)</a>
+        </nav>
+        <!-- SECCIÓN 1: SOLO HTML -->
+        <section class="dw-section" id="dw-html">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <h2 class="dw-section-title">1. HTML: la estructura.</h2>
+                    <p class="dw-section-text"> Con HTML construyo la estructura de una página: secciones, encabezados, párrafos, listas, botones y bloques de contenido bien organizados y semánticos. <br> A la derecha ves una maqueta armada sólo con HTML. Sin estilos, pero con la lógica que después permite maquetar cualquier diseño.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="dw-demo-card dw-demo-html">
+                        <header class="dw-demo-header">Mi primera estructura HTML</header>
+                        <article class="dw-demo-body">
+                            <h3>Artículo destacado</h3>
+                            <p>Este es un texto de ejemplo para mostrar cómo se arma una sección usando sólo etiquetas HTML.</p>
+                            <ul>
+                                <li>Encabezados organizan la información</li>
+                                <li>Listas agrupan ideas relacionadas</li>
+                                <li>Botones invitan a la acción</li>
+                            </ul>
+                            <a href="#" class="dw-btn-ghost">Ver más</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECCIÓN 2: HTML + CSS (ANTES / DESPUÉS) -->
+        <section class="dw-section" id="dw-html-css">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <h2 class="dw-section-title">2. HTML + CSS: dar estilo.</h2>
+                    <p class="dw-section-text"> Con CSS puedo transformar una estructura simple en una interfaz con identidad: tipografías, colores, espaciados, sombras y composición visual. <br> Acá comparo el mismo bloque en dos estados: <strong>sin estilos</strong> y <strong>con estilos</strong>. Podés alternar entre uno y otro.</p>
+                </div>
+                <div class="col-lg-7">
+                    <!-- toggle antes / después -->
+                    <div class="dw-toggle-wrapper">
+                        <input type="checkbox" id="dw-css-toggle" class="dw-toggle-input">
+                        <label for="dw-css-toggle" class="dw-toggle-label">
+                            <span class="dw-toggle-text dw-toggle-off">Sin estilos</span>
+                            <span class="dw-toggle-slider"></span>
+                            <span class="dw-toggle-text dw-toggle-on">Con estilos</span>
+                        </label>
+                        <!-- bloque sin estilos -->
+                        <div class="dw-demo-html-raw">
+                            <h3>Mi proyecto favorito</h3>
+                            <p>Un párrafo de ejemplo para mostrar cómo se ve el contenido antes de aplicar CSS.</p>
+                            <button>Ver proyecto</button>
+                        </div>
+                        <!-- bloque con estilos -->
+                        <div class="dw-demo-html-styled">
+                            <div class="dw-project-card">
+                                <p class="dw-project-tag">Proyecto web</p>
+                                <h3 class="dw-project-title">Portafolio interactivo</h3>
+                                <p class="dw-project-text"> Un sitio diseñado para contar historias visuales, con animaciones suaves, tipografías cuidadas y componentes reutilizables.</p>
+                                <button class="dw-btn-primary">Ver proyecto</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECCIÓN 3: INTERACCIONES CON CSS -->
+        <section class="dw-section" id="dw-interacciones">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="dw-section-title">3. Interacciones con CSS.</h2>
+                    <p class="dw-section-text">Uso pseudoclases como <code>:hover</code>, <code>:focus</code> o <code>:active</code> para crear feedback visual cuando la persona interactúa con la página, sin necesidad de JavaScript. <br> En este ejemplo muestro tarjetas que reaccionan al pasar el mouse o hacer foco: se elevan, cambian color y dan sensación de interfaz “viva”.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="dw-interactive-grid">
+                        <article class="dw-card-interactive">
+                            <h3>Botones con feedback</h3>
+                            <p>Estados hover y active que indican que algo está pasando.</p>
+                            <button class="dw-btn-outline">Probar botón</button>
+                        </article>
+                        <article class="dw-card-interactive">
+                            <h3>Links resaltados</h3>
+                            <p>Subrayados suaves, cambios de color y animaciones sutiles al pasar.</p>
+                            <a href="#" class="dw-link-ghost">Ver ejemplo</a>
+                        </article>
+                        <article class="dw-card-interactive">
+                            <h3>Tarjetas focus-friendly</h3>
+                            <p>Diseño pensado también para navegación con teclado.</p>
+                            <button class="dw-btn-outline">Navegar con tab</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECCIÓN 4: ANIMACIONES -->
+        <section class="dw-section" id="dw-animaciones">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-5">
+                    <h2 class="dw-section-title">4. Animaciones con CSS.</h2>
+                    <p class="dw-section-text"> Con transiciones y <code>@keyframes</code> puedo crear microanimaciones que acompañen la experiencia: elementos que flotan, parpadean suave o aparecen con movimiento. La idea es que las animaciones sumen, sin distraer: sutiles, fluidas y coherentes con la identidad visual del proyecto.</p>
+                </div>
+                <div class="col-lg-7">
+                    <div class="dw-anim-scene">
+                        <div class="dw-anim-orbita">
+                            <div class="dw-anim-dot dw-dot-html">HTML</div>
+                            <div class="dw-anim-dot dw-dot-css">CSS</div>
+                            <div class="dw-anim-dot dw-dot-bs">BS</div>
+                        </div>
+                        <div class="dw-anim-core">
+                            <p>Componentes</p>
+                            <span>Limpiitos, reutilizables y animados con cariño.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECCIÓN 5: JAVASCRIPT PRÓXIMAMENTE -->
+        <section class="dw-section dw-section-js" id="dw-js">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-7">
+                    <h2 class="dw-section-title">5. JavaScript: cargando…</h2>
+                    <p class="dw-section-text"> JavaScript es mi próximo paso: estoy empezando a estudiarlo para sumar lógica, datos dinámicos e interacciones más complejas.</p>
+                    <div class="dw-loader-wrapper">
+                        <div class="dw-loader"></div>
+                        <p class="dw-loader-text">Próximamente: sliders, filtros y componentes interactivos con JS.</p>
+                    </div>
+                    <p class="dw-note"> Mientras tanto, toda la interactividad de este sitio está resuelta con <strong>HTML, CSS y Bootstrap</strong>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- metodo de contacto -->
+        <a href="mailto:jochumottaa@gmail.com" target="_blank">Queres saber más?</a>
+        <p> Porfolio 2025.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
