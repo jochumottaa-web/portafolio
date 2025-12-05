@@ -1,0 +1,392 @@
+@use "../componentes/extend";
+
+/* PÁGINA DESARROLLO WEB (dw) */
+/*probando cambians*/
+
+body.animaciones {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(120deg, #010e1a, #490079, #8da8b3);
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+    .dw-main {
+        padding-top: 60px;
+        padding-bottom: 80px;
+        #titledw {
+            color: white
+        }
+        /* Capa base de estrellas pequeñas */
+        #stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 1px;
+            background: transparent;
+            box-shadow:
+            50px 80px #fff,
+            120px 200px #fff,
+            300px 400px #fff,
+            600px 150px #fff,
+            800px 500px #fff,
+            1000px 300px #fff;
+            animation: animStars 60s linear infinite;
+        }
+        /* Capa intermedia */
+        #stars2 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 2px;
+            background: transparent;
+            box-shadow:
+            100px 50px #fff,
+            250px 300px #fff,
+            450px 200px #fff,
+            700px 400px #fff,
+            900px 250px #fff;
+            animation: animStars 100s linear infinite;
+        }
+        /* Capa cercana */
+        #stars3 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 3px;
+            background: transparent;
+            box-shadow:
+            150px 150px #fff,
+            350px 250px #fff,
+            550px 350px #fff,
+            750px 450px #fff;
+            animation: animStars 150s linear infinite;
+        }
+        .dw-hero {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: #ffffff;
+            margin-bottom: 8px;
+            .dw-title {
+                font-size: clamp(2.4rem, 3vw, 3.2rem);
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                margin-bottom: 12px;
+                color: #ffffff;
+            }
+            h1, h2 {
+                color: #ffffff;           
+            }
+            .dw-intro {
+                max-width: 640px;
+                color: #ffffff;
+                line-height: 1.6;
+                }
+        }
+        .dw-nav-local {
+            margin: 32px 0 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            border-radius: 999px;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 6px 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            .dw-nav-link {
+                padding: 6px 14px;
+                border-radius: 999px;
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                letter-spacing: 0.12em;
+                color: #5a5650;
+                text-decoration: none;
+                transition: background-color 0.2s ease,
+                color 0.2s ease,
+                transform 0.1s ease;
+                &:hover {
+                    background-color: #f0ebe1;
+                    color: #333;
+                    transform: translateY(-1px);
+                }
+            }
+        }
+        .dw-section {
+            margin-bottom: 72px;
+            .dw-section-title {
+                font-size: 1.6rem;
+                margin-bottom: 10px;
+                color: #ffffff;
+            }
+            .dw-section-text {
+                color: #ffffff;
+                line-height: 1.6;
+                margin-bottom: 10px;
+            }
+            .dw-demo-card, .dw-demo-html {
+                border-radius: 18px;
+                background-color: rgba(255,255,255,0.9);
+                box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+                overflow: hidden;
+                .dw-demo-header {
+                    background-color: #f1ece3;
+                    padding: 10px 16px;
+                    font-size: 0.85rem;
+                    letter-spacing: 0.12em;
+                    text-transform: uppercase;
+                }
+                .dw-demo-body {
+                    padding: 18px 20px 20px;
+                    h3 {
+                        margin-bottom: 6px;
+                    }
+                    ul {
+                        padding-left: 18px;
+                        margin-bottom: 14px;
+                    }
+                    .dw-btn-ghost {
+                        display: inline-block;
+                        padding: 6px 14px;
+                        border-radius: 999px;
+                        border: 1px solid rgba(0,0,0,0.16);
+                        font-size: 0.8rem;
+                        text-transform: uppercase;
+                        letter-spacing: 0.12em;
+                        text-decoration: none;
+                        color: #444;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.dw-toggle-wrapper {
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 18px;
+    padding: 16px 18px 20px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+    .dw-toggle-input {
+        display: none;
+    }
+    .dw-toggle-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px 8px;
+        border-radius: 999px;
+        background-color: rgba(0,0,0,0.06);
+        cursor: pointer;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 14px;
+        .dw-toggle-text {
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+        .dw-toggle-on {
+            opacity: 0;
+            transform: translateX(4px);
+        }
+        .dw-toggle-off {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .dw-toggle-slider {
+            width: 28px;
+            height: 16px;
+            border-radius: 999px;
+            background-color: #f5f1e8;
+            position: relative;
+            box-shadow: inset 0 0 0 1px rgba(0,0,0,0.18);
+            &:before {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: #333;
+                transition: transform 0.2s ease;
+            }
+        }
+    }
+    .dw-demo-html-raw,
+    .dw-demo-html-styled {
+        border-radius: 14px;
+        padding: 16px 18px;
+        background-color: #faf7f0;
+    }
+    .dw-demo-html-styled {
+        display: none;
+    }
+    .dw-toggle-input:checked ~ .dw-toggle-label .dw-toggle-off {
+        opacity: 0;
+        transform: translateX(-4px);
+    }
+    .dw-toggle-input:checked ~ .dw-toggle-label .dw-toggle-on {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .dw-toggle-input:checked ~ .dw-toggle-label .dw-toggle-slider::before {
+        transform: translateX(12px);
+    }
+
+    .dw-toggle-input:checked ~ .dw-demo-html-raw {
+        display: none;
+    }
+    .dw-toggle-input:checked ~ .dw-demo-html-styled {
+        display: block;
+    }
+    .dw-project-card {
+        border-radius: 14px;
+        background: linear-gradient(135deg, #f4dcb2, #fcb4bb);
+        padding: 18px 20px 20px;
+    }
+    .dw-project-tag {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        margin-bottom: 4px;
+        color: #7d7466;
+    }
+    .dw-project-title {
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+    }
+    .dw-project-text {
+        font-size: 0.95rem;
+        color: #443f38;
+        margin-bottom: 10px;
+    }
+    .dw-btn-primary {
+        @extend %pill-btn;
+        border: none;
+        background-color: #28221b;
+        color: #fff;
+    }
+}
+
+
+/* Interacciones */
+.dw-interactive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 16px;
+    .dw-card-interactive {
+        background-color: rgba(255,255,255,0.9);
+        border-radius: 16px;
+        padding: 16px 18px 18px;
+        box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+        &:hover, &:focus-within {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+        }
+        .dw-btn-outline {
+            border-radius: 999px;
+            border: 1px solid rgba(0,0,0,0.25);
+            padding: 6px 14px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            background: transparent;
+        }
+        .dw-link-ghost {
+            font-size: 0.9rem;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0,0,0,0.3);
+            padding-bottom: 2px;
+        }
+    }
+}
+
+
+
+/* Animación órbita */
+.dw-anim-scene {
+    position: relative;
+    border-radius: 22px;
+    background: radial-gradient(circle at top left, #f8f2e8, #e9dfcf);
+    padding: 26px 22px;
+    overflow: hidden;
+    box-shadow: 0 18px 46px rgba(0,0,0,0.12);
+    .dw-anim-orbita {
+        position: relative;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        border: 1px dashed rgba(0,0,0,0.15);
+        animation: dw-spin 16s linear infinite;
+        .dw-anim-dot {
+            position: absolute;
+            border-radius: 999px;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            background-color: rgba(255,255,255,0.9);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        .dw-dot-html { top: -8px; left: 50%; transform: translateX(-50%); 
+        }
+        .dw-dot-css  { right: -6px; top: 50%; transform: translateY(-50%); 
+        }
+        .dw-dot-bs   { bottom: -8px; left: 50%; transform: translateX(-50%); 
+        }
+    }
+    .dw-anim-core {
+        position: absolute;
+        right: 18px;
+        bottom: 18px;
+        max-width: 230px;
+        text-align: right;
+        p {
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            font-size: 0.8rem;
+            margin-bottom: 4px;
+        }
+        span {
+            font-size: 0.9rem;
+            color: #443f38;
+        }
+    }
+}
+
+/* loader JS */
+.dw-section-js {
+    margin-top: 20px;
+        .dw-loader-wrapper {
+        margin: 18px auto 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        .dw-loader {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.754);
+            border-top-color: #868282;
+            animation: dw-spin 1s linear infinite;
+        }
+        .dw-loader-text {
+            font-size: 0.9rem;
+            color: #ffffff;
+        }
+    }
+    .dw-note {
+        font-size: 0.9rem;
+        color: #666;
+    }
+}
+
+
+
+
+
+

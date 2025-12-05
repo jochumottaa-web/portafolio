@@ -1,2 +1,9 @@
 # Sistema macOS
 .DS_Store
+
+# Dependencias de Node
+node_modules/
+
+
+package.json
+package-lock.json

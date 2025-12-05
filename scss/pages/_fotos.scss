@@ -1,0 +1,169 @@
+@use "../componentes/variables";
+
+/* HTML DE FOTOS */
+
+/* antes y despues */
+.card-toggle-fotos {
+    background-color: rgba(255, 255, 255, 0.712);
+    border-radius: 18px;
+    padding: 20px 24px 24px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(4px);
+    .toggle-edicion-input {
+        display: none;
+    }
+        .toggle-edicion-input:checked~.galeria-original {
+        display: none;
+    }
+    .toggle-edicion-input:checked~.galeria-editada {
+        display: block;
+    }
+    .card-toggle-header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+    .foto-thumb {
+        border-radius: 12px;
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+    .galeria-editada {
+        display: none;
+    }
+    .toggle-switch {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px 8px;
+        border-radius: 999px;
+        background-color: rgba(0, 0, 0, 0.06);
+        cursor: pointer;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        .toggle-text {
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+        .toggle-on {
+            opacity: 0;
+            transform: translateX(4px);
+        }
+        .toggle-off {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .toggle-slider {
+            width: 28px;
+            height: 16px;
+            border-radius: 999px;
+            background-color: variables.$color-fondo-claro;
+            position: relative;
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18);
+            &:before {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: #333;
+                transition: transform 0.2s ease;
+            }
+        }
+    }
+    .toggle-edicion-input:checked~.card-toggle-header .toggle-off {
+        opacity: 0;
+        transform: translateX(-4px);
+    }
+    .toggle-edicion-input:checked~.card-toggle-header .toggle-on {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .toggle-edicion-input:checked~.card-toggle-header .toggle-slider::before {
+        transform: translateX(12px);
+    }
+}
+
+
+
+/* Carpeta de fotos con pestañas */
+
+.carpeta-galeria {
+    margin: 60px 0 80px;
+    .galeria-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 16px;
+        .foto-grid {
+            width: 100%;
+            border-radius: 12px;
+            height: 220px;
+            object-fit: cover;
+            &:hover {
+                transform: scale(1.03);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                cursor: pointer;
+            }
+        }
+    }
+    .foto-tabs {
+        max-width:1000px;
+        margin: 70px auto;
+        border-radius: 16px;
+        box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+        input[type="radio"] {
+            display: none;
+        }
+        .tabs-header {
+            background-color: variables.$color-fondo-medio;
+            border-radius: 16px 16px 0 0;
+            padding: 10px 16px 0;
+            display: flex;
+            gap: 8px;
+            .tab {
+                padding: 6px 14px;
+                border-radius: 12px 12px 0 0;
+                background-color: #d3cfc4;
+                font-size: 0.8rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                border: 1px solid transparent;
+                border-bottom: none;
+                cursor: pointer;
+            }
+        }
+        .tabs-content {
+            background-color: variables.$color-fondo-claro;
+            border-radius: 0 0 16px 16px;
+            padding: 18px 20px 22px;
+            .tab-panel {
+                display: none;
+            }
+        }
+    }
+    #tab-gastro:checked ~ .tabs-content .panel-gastro {
+        display: block;
+    }
+    #tab-paisajes:checked ~ .tabs-content .panel-paisajes {
+        display: block;
+    }
+    #tab-retratos:checked ~ .tabs-content .panel-retratos {
+        display: block; 
+    }  
+    #tab-gastro:checked ~ .tabs-header label[for="tab-gastro"],
+    #tab-paisajes:checked ~ .tabs-header label[for="tab-paisajes"],
+    #tab-retratos:checked ~ .tabs-header label[for="tab-retratos"] {
+        background-color: variables.$color-fondo-claro;
+        border-color: rgba(0,0,0,0.12);
+        border-bottom: 1px solid #f7f5f0;
+    } 
+}
+
+
+
+

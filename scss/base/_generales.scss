@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Darker+Grotesque:wght@300..900&family=Notable&display=swap');
+
+/*Body y Main*/
+
+main {
+    color: black;
+    padding: 40px 20px 60px;
+}
+
+
+body.inicio {
+    margin: 0;
+    width: 100%;
+    background-color: #010e1a;
+    background-image: url(../img/fondo.jpg), url(../img/fondo2.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% auto, 170% auto;
+    background-position: top center, bottom center;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.title h1 {
+    font-family: "Notable", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5vw;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title h2 {
+    font-family: "Ballet", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vw;
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.title p {
+    font-family: "Darker Grotesque", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2vw;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
